@@ -22,14 +22,12 @@ public class Checking_Prime extends AppCompatActivity
     public static int i1 = 0;
     public static String i2 = "";
 
-//    @Override
-//    public void onBackPressed()
-//    {
-//        Intent intent = new Intent();
-//        intent.setAction(Intent.ACTION_MAIN);
-//        intent.addCategory(Intent.CATEGORY_HOME);
-//        startActivity(intent);
-//    }
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        return;
+    }
     @Override
     public void onSaveInstanceState(Bundle outState)
     {
