@@ -55,10 +55,15 @@ public class Checking_Prime extends AppCompatActivity
         tv.setText("Is " + Integer.toString( i1 ) + " a prime no?" );
 
         Button deepcorrec = (Button)findViewById(R.id.correc);
+        Button deepincorrec = (Button)findViewById(R.id.incorrec);
+
+        deepcorrec.setEnabled(true);
+        deepincorrec.setEnabled(true);
         deepcorrec.setOnClickListener( new Button.OnClickListener()
                 {
                     public void onClick(View v)
                     {
+                        Button deepincorrec = (Button)findViewById(R.id.incorrec);
                         boolean flag = false;
                         int i;
 
@@ -85,15 +90,17 @@ public class Checking_Prime extends AppCompatActivity
                         {
                             Toast.makeText(getApplicationContext(),"It is Incorrect!!", Toast.LENGTH_SHORT).show();
                         }
+                        deepincorrec.setEnabled(false);
                     }
                 }
         );
 
-        Button deepincorrec = (Button)findViewById(R.id.incorrec);
+
         deepincorrec.setOnClickListener(new Button.OnClickListener()
                 {
                     public void onClick(View v)
                     {
+                        Button deepcorrec = (Button)findViewById(R.id.correc);
                         boolean flag = false;
                         int i;
 
@@ -120,6 +127,7 @@ public class Checking_Prime extends AppCompatActivity
                         {
                             Toast.makeText(getApplicationContext(),"It is Correct!!", Toast.LENGTH_SHORT).show();
                         }
+                        deepcorrec.setEnabled(false);
                     }
                 }
         );
@@ -129,11 +137,17 @@ public class Checking_Prime extends AppCompatActivity
                 {
                     public void onClick(View v)
                     {
+                        Button deepcorrec = (Button)findViewById(R.id.correc);
+                        Button deepincorrec = (Button)findViewById(R.id.incorrec);
+
                         Random r = new Random();
                         i1 = r.nextInt(1001 - 1) + 1;
 
                         TextView tv =(TextView)findViewById(R.id.texx);
                         tv.setText("Is " + Integer.toString( i1 ) + " a prime no?" );
+
+                        deepcorrec.setEnabled(true);
+                        deepincorrec.setEnabled(true);
                     }
                 }
         );
@@ -143,7 +157,13 @@ public class Checking_Prime extends AppCompatActivity
         {
             public void onClick(View v)
             {
+                Button deepcorrec = (Button)findViewById(R.id.correc);
+                Button deepincorrec = (Button)findViewById(R.id.incorrec);
+
                 startActivity( new Intent(getApplicationContext(), Checking_Primee.class) );
+
+                deepcorrec.setEnabled(true);
+                deepincorrec.setEnabled(true);
             }
         }
         );
