@@ -13,6 +13,12 @@ import java.util.Random;
 
 public class Checking_Primee extends AppCompatActivity
 {
+//    @Override
+//    public void onBackPressed()
+//    {
+//        this.finish();
+//        return;
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

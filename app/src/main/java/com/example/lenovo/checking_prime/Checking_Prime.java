@@ -22,14 +22,14 @@ public class Checking_Prime extends AppCompatActivity
     public static int i1 = 0;
     public static String i2 = "";
 
-    @Override
-    public void onBackPressed()
-    {
-        // TODO Auto-generated method stub
-        super.onBackPressed();
-        finish();
-    }
-
+//    @Override
+//    public void onBackPressed()
+//    {
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_MAIN);
+//        intent.addCategory(Intent.CATEGORY_HOME);
+//        startActivity(intent);
+//    }
     @Override
     public void onSaveInstanceState(Bundle outState)
     {
